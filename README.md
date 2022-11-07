@@ -1,2 +1,2 @@
 # Github
- Reopsitorio personal Git
+Repositorio personal Git para proyectos angular
