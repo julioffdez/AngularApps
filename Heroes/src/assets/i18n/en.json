@@ -1,0 +1,19 @@
+{
+    "list": {
+        "title": "Heroes List",
+        "company": "Company",
+        "name": "Name",
+        "filter": "Filter",
+        "description": "Description"
+    },
+    "newhero":{
+        "title":"Add Heroe"
+    },
+    "general":{
+        "edit":"Edit",
+        "delete": "Delete",
+        "cancel": "Cancel",
+        "save": "Save",
+        "update":"Update"
+    }
+}

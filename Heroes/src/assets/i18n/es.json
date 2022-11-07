@@ -1,0 +1,19 @@
+{
+    "list": {
+        "title": "Listado Heroes",
+        "company": "Compañía",
+        "name": "Nombre",
+        "filter": "Filtrar",
+        "description": "Descripción"
+    },
+    "newhero":{
+        "title":"Añadir Heroe"
+    },
+    "general":{
+        "edit":"Editar",
+        "delete": "Eliminar",
+        "cancel": "Cancelar",
+        "save": "Guardar",
+        "update":"Actualizar"
+    }
+}
