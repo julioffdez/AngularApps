@@ -1,3 +1,2 @@
 # Github
- Repo
-sitorio personal Git
+Repositorio personal Git
