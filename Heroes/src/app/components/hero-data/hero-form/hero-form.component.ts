@@ -20,7 +20,6 @@ export class HeroFormComponent implements OnInit {
 
   constructor(private route:ActivatedRoute, private formBuilder: FormBuilder, private heroService:HeroesService,
     private router:Router,private translateService:TranslateService) { 
-    
   }
   
   ngOnInit() {
@@ -34,6 +33,10 @@ export class HeroFormComponent implements OnInit {
       company: new FormControl('')
     });
 
+    this.getFormDefaultValues();
+  }
+  
+  private getFormDefaultValues():void{
     this.heroId = this.route.snapshot.params.id;
     if(this.heroId){
       this.heroService.getHeroe(this.heroId).subscribe({
@@ -53,7 +56,7 @@ export class HeroFormComponent implements OnInit {
     }
   }
 
-  doSomething(){
+  public doSomething():void{
     if(this.heroForm.valid){
       if(this.newUser){
         this.heroService.addHero(this.heroForm.getRawValue()).subscribe({
@@ -69,7 +72,7 @@ export class HeroFormComponent implements OnInit {
     }
   }
   
-  backToList(){
+  public backToList():void{
     this.router.navigate(['/list']);
   }
 

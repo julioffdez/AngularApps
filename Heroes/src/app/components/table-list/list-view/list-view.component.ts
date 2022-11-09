@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog, MatPaginator, MatTableDataSource } from '@angular/material';
-import { DialogDeleteComponent } from 'src/app/dialog/dialog-delete/dialog-delete.component';
+import { DialogDeleteComponent } from 'src/app/components/dialog/dialog-delete/dialog-delete.component';
 import { HeroesService } from 'src/app/services/heroes.service';
 import { Heroe } from 'src/app/model/heroe';
 import { TranslateService } from '@ngx-translate/core';
@@ -17,7 +17,7 @@ export class ListViewComponent implements OnInit {
   @ViewChild(MatPaginator,{static:true}) paginator: MatPaginator;
 
   constructor(private heroService:HeroesService, public dialog: MatDialog, private translateService:TranslateService) {
-    //this.translateService.use(localStorage.getItem("appLanguage"));
+    
    }
   
   ngAfterViewInit() {
@@ -28,7 +28,7 @@ export class ListViewComponent implements OnInit {
     this.getAllHeroes();
   }
 
-  openDialog(heroId:number){
+  public openDialog(heroId:number): void{
       const dialogRef = this.dialog.open(DialogDeleteComponent);
   
       dialogRef.afterClosed().subscribe(result => {
@@ -41,13 +41,13 @@ export class ListViewComponent implements OnInit {
       });
   }
 
-  getAllHeroes(){
+  private getAllHeroes():void{
     this.heroService.getHeroes().subscribe({
       next: (data:Heroe[]) => this.heroes.data = data,
     });
   }
 
-  searchHeroes(term:string){
+  public searchHeroes(term:string):void{
     this.heroService.getHeroes().subscribe({
       next: (data:Heroe[]) => this.heroes.data = data.filter((hero)=>hero.name.toLowerCase().includes(term.toLowerCase())),
     });
