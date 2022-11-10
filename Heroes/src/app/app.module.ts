@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TableListModule } from './table-list/table-list.module';
+import { TableListModule } from './components/table-list/table-list.module';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { HeroDataModule } from './hero-data/hero-data.module';
+import { HeroDataModule } from './components/hero-data/hero-data.module';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { InterceptorService } from './services/interceptor.service';

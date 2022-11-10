@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDialog, MatPaginator, MatTableDataSource } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from "@angular/material/paginator";
+import { MatTableDataSource } from "@angular/material/table";
 import { DialogDeleteComponent } from 'src/app/components/dialog/dialog-delete/dialog-delete.component';
 import { HeroesService } from 'src/app/services/heroes.service';
 import { Heroe } from 'src/app/model/heroe';
