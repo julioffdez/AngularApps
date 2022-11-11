@@ -1,12 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TableListModule } from './components/table-list/table-list.module';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { HeroDataModule } from './components/hero-data/hero-data.module';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { InterceptorService } from './services/interceptor.service';
@@ -20,8 +17,6 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TableListModule,
-    HeroDataModule,
     HttpClientModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,

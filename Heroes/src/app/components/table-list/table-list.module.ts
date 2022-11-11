@@ -5,14 +5,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from "@angular/material/icon";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatTableModule } from "@angular/material/table";
-import { AppRoutingModule } from '../../app-routing.module';
 import { NgxSpinnerModule } from "ngx-spinner";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { BrowserModule } from '@angular/platform-browser';
 import { DialogModule } from '../dialog/dialog.module';
-import { createTranslateLoader, TranslateHeroModule } from '../../translate/translate-hero.module';
+import { createTranslateLoader } from '../../translate/translate-hero.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
+import { TableListRoutingModule } from './table-list-routing.module';
 
 @NgModule({
   declarations: [ListViewComponent],
@@ -22,12 +20,10 @@ import { HttpClient } from '@angular/common/http';
     MatPaginatorModule,
     MatButtonModule,
     MatIconModule,
-    AppRoutingModule,
     NgxSpinnerModule,
-    BrowserModule,
-    BrowserAnimationsModule,
     DialogModule,
-    TranslateModule.forRoot({
+    TableListRoutingModule,
+    TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,

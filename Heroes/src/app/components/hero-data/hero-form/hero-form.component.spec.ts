@@ -3,7 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeroFormComponent } from './hero-form.component';
 import { CommonModule } from '@angular/common';
 import { NgxSpinnerModule } from "ngx-spinner";
-import { HTTP_INTERCEPTORS, HttpClientModule, HttpClient } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { InterceptorService } from 'src/app/services/interceptor.service';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { TableListModule } from 'src/app/components/table-list/table-list.module';
