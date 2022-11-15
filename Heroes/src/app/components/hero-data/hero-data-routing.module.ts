@@ -8,6 +8,7 @@ const routes: Routes = [
     path: "",
     children: [
       { path: "", component: HeroFormComponent }, 
+      { path: ":id", component: HeroFormComponent }, 
       { path: "**", redirectTo: ""}      
     ],
   },

@@ -19,7 +19,6 @@ export class ListViewComponent implements OnInit {
   @ViewChild(MatPaginator,{static:true}) paginator: MatPaginator;
 
   constructor(private heroService:HeroesService, public dialog: MatDialog, private translateService:TranslateService) {
-    
    }
   
   ngAfterViewInit() {
@@ -45,14 +44,30 @@ export class ListViewComponent implements OnInit {
 
   private getAllHeroes():void{
     this.heroService.getHeroes().subscribe({
-      next: (data:Heroe[]) => this.heroes.data = data,
+      next: (data:Heroe[]) => {this.heroes.data = data;console.log(this.heroes.data)}
+      
+      ,
     });
   }
 
-  public searchHeroes(term:string):void{
-    this.heroService.getHeroes().subscribe({
-      next: (data:Heroe[]) => this.heroes.data = data.filter((hero)=>hero.name.toLowerCase().includes(term.toLowerCase())),
-    });
+  public searchHeroes(term:string):void{    
+    if(term.length > 0 && !isNaN(Number(term))){
+      this.heroService.getHeroe(Number.parseInt(term)).subscribe({
+        next: (data:Heroe) => {
+          let heroData = new Array<Heroe>();
+          heroData.push(data);
+          this.heroes.data = heroData;
+        },
+        error: () => this.heroes.data = []        
+      });
+    }
+    else{
+      this.heroService.getHeroes().subscribe({
+        next: (data:Heroe[]) => {this.heroes.data = data.filter(
+          (hero)=> hero.name.toLowerCase().includes(term.toLowerCase()) );
+          },
+      });
+    }
   }
 
 }

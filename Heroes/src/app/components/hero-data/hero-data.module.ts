@@ -8,6 +8,8 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { createTranslateLoader } from '../../translate/translate-hero.module';
 import { HttpClient } from '@angular/common/http';
 import { HeroDataRoutingModule } from './hero-data-routing.module';
+import { UppercaseDirective } from 'src/app/directives/uppercase.directive';
+import { DirectivesModule } from 'src/app/directives/directives.module';
 
 @NgModule({
   declarations: [HeroFormComponent],
@@ -17,6 +19,7 @@ import { HeroDataRoutingModule } from './hero-data-routing.module';
     MatButtonModule,
     NgxSpinnerModule,
     HeroDataRoutingModule,
+    DirectivesModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,

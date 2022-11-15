@@ -11,6 +11,7 @@ import { createTranslateLoader } from '../../translate/translate-hero.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TableListRoutingModule } from './table-list-routing.module';
+import { DirectivesModule } from 'src/app/directives/directives.module';
 
 @NgModule({
   declarations: [ListViewComponent],
@@ -23,6 +24,7 @@ import { TableListRoutingModule } from './table-list-routing.module';
     NgxSpinnerModule,
     DialogModule,
     TableListRoutingModule,
+    DirectivesModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,

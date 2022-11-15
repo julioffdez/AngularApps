@@ -42,13 +42,12 @@ export class HeroFormComponent implements OnInit {
       this.heroService.getHeroe(this.heroId).subscribe({
         next: (data:Heroe)=>{
           this.hero = data;
-          this.heroForm.get("name").setValue(this.hero.name);
-          this.heroForm.get("description").setValue(this.hero.description);
-          this.heroForm.get("company").setValue(this.hero.company);
+          this.heroForm.get("name").setValue(this.hero.name.toUpperCase());
+          this.heroForm.get("description").setValue(this.hero.description.toUpperCase());
+          this.heroForm.get("company").setValue(this.hero.company.toUpperCase());
           this.title = this.hero.name;
         },
       });
-      
     }
     else{
       this.newUser = true;
@@ -56,7 +55,7 @@ export class HeroFormComponent implements OnInit {
     }
   }
 
-  public doSomething():void{
+  public submitForm():void{
     if(this.heroForm.valid){
       if(this.newUser){
         this.heroService.addHero(this.heroForm.getRawValue()).subscribe({

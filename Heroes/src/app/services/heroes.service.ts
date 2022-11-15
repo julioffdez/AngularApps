@@ -25,13 +25,13 @@ export class HeroesService {
     })
   }
   
-  public updateHero(hero, id){
+  public updateHero(hero, id):Observable<Object>{
     return this._httpClient.put(URL+ '/' + id, hero, {
       headers: new HttpHeaders({'Content-Type':  'application/json'}),
     }) 
   }
 
-  public deleteHero(id:number){
+  public deleteHero(id:number):Observable<Object>{
     return this._httpClient.delete(URL+ '/' + id, {
       headers: new HttpHeaders({'Content-Type':  'application/json'}),
     })

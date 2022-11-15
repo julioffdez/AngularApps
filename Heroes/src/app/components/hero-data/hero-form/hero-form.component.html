@@ -4,10 +4,10 @@
     </div>
 </nav>
 <div class="container">
-    <form [formGroup]="heroForm" (ngSubmit)="doSomething()">
+    <form [formGroup]="heroForm" (ngSubmit)="submitForm()">
         <div class="mb-3">
             <label for="name">{{'list.name' | translate}}</label>
-            <input id="name" class="form-control" type="text" formControlName="name" />
+            <input id="name" appUppercase class="form-control" type="text" formControlName="name" />
             <div *ngIf="heroForm.controls.name.invalid && (heroForm.controls.name.dirty || heroForm.controls.touched)" class="alert alert-danger">
               
                 <div *ngIf="heroForm.controls.name.errors?.required">
@@ -20,11 +20,11 @@
         </div>
         <div class="mb-3">
             <label for="company">{{'list.company' | translate}}</label>
-            <input id="company" class="form-control" type="text" formControlName="company" />
+            <input id="company" appUppercase class="form-control" type="text" formControlName="company" />
         </div>
         <div class="mb-3">
             <label for="description">{{'list.description' | translate}}</label>
-            <textarea id="description" class="form-control" rows="3" formControlName="description"></textarea>
+            <textarea id="description" appUppercase class="form-control" rows="3" formControlName="description"></textarea>
         </div>
         <div class="d-grid gap-2 d-md-block">
             <button type="button" (click)="backToList()" class="btn btn-primary me-md-2">{{'general.cancel' | translate}}</button>

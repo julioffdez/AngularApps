@@ -13,6 +13,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 @NgModule({
   declarations: [
     AppComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -30,9 +31,9 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
       }
     })
   ],
+  
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true},
-    
+    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true},  
   ],
   bootstrap: [AppComponent]
 })
