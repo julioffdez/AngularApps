@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HeroFormComponent } from './hero-data/hero-form/hero-form.component';
-import { ListViewComponent } from './table-list/list-view/list-view.component';
-
 
 const routes: Routes = [
-  { path: 'list', component: ListViewComponent },
-  { path: 'hero', component: HeroFormComponent },
-  { path: 'hero/:id', component: HeroFormComponent },
-  { path: '**', component: ListViewComponent },
+  { 
+    path: '', redirectTo: 'list', pathMatch: 'full'
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('../app/components/table-list/table-list.module').then(m => m.TableListModule)      
+  },
+  {
+    path: 'hero',
+    loadChildren: () => import('../app/components/hero-data/hero-data.module').then(m => m.HeroDataModule)      
+  },
 ];
 
 @NgModule({

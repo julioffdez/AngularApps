@@ -11,27 +11,27 @@ const URL = environment.base_url;
 export class HeroesService {
   constructor(private _httpClient:HttpClient) { }
 
-  getHeroes():Observable<Object>{
+  public getHeroes():Observable<Object>{
     return this._httpClient.get(URL);
   }
 
-  getHeroe(id:number):Observable<Object>{
+  public getHeroe(id:number):Observable<Object>{
     return this._httpClient.get(URL + '/' + id);
   }
 
-  addHero(newHero):Observable<Object>{
+  public addHero(newHero):Observable<Object>{
     return this._httpClient.post(URL, newHero, {
       headers: new HttpHeaders({'Content-Type':  'application/json'}),
     })
   }
   
-  updateHero(hero, id){
+  public updateHero(hero, id):Observable<Object>{
     return this._httpClient.put(URL+ '/' + id, hero, {
       headers: new HttpHeaders({'Content-Type':  'application/json'}),
     }) 
   }
 
-  deleteHero(id:number){
+  public deleteHero(id:number):Observable<Object>{
     return this._httpClient.delete(URL+ '/' + id, {
       headers: new HttpHeaders({'Content-Type':  'application/json'}),
     })

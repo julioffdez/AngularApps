@@ -19,7 +19,7 @@ export class TranslateHeroComponent implements OnInit {
   ngOnInit() {
   }
   
-  selectLanguage(lang: string) {
+  public selectLanguage(lang: string):void {
     this.translateService.use(lang);
   }
 }
