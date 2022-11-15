@@ -2,7 +2,7 @@
     <div class="container-fluid">
       <span class="navbar-brand">{{'list.title' | translate}}</span>
       <form class="d-flex" role="search">
-        <input #heroSearchTerm (input)="searchHeroes(heroSearchTerm.value)" appUppercase class="form-control me-2" type="search" placeholder="{{'list.filter' | translate}}" aria-label="Search">
+        <input #heroSearchTerm (input)="searchHeroes(heroSearchTerm.value)" appUppercase class="form-control" type="search" placeholder="{{'list.filter' | translate}}" aria-label="Search">
       </form>
     </div>
 </nav>
