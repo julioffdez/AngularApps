@@ -22,7 +22,7 @@ npm install
 una vez finalizadas las operaciones, es necesario levantar la bbdd
 
 ```
-npm run fast
+npm run jsonserver
 ```
 
 podemos ver el sistema en el navegador
@@ -40,7 +40,3 @@ ng serve -o
 ## Autores ✒️
 
 * **Julio Fernández** - [julioffdez](https://github.com/julioffdez)
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
