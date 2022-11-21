@@ -1,27 +1,42 @@
-# HeroesApp
+# Heroes for Hiberus
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
+Este app angular desarrolla un sistema de creación, eliminación, actualización y visionado de un conjunto de heroes, implementando las funcionalidades más habituales dentro de cualquier sistema angular.
 
-## Development server
+## Comenzando 🚀
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para comenzar con la modificación del código es necesario tener conocimientos de Angular y tecnologías web.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Pre-requisitos 📋
 
-## Build
+Es necesario tener instalado una versión del framework Angular >= 11 y node >= 12
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+### Instalación 🔧
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para instalar en su equipo el aplicativo es necesario ejecutar las siguientes instrucciones
 
-## Running end-to-end tests
+```
+npm install
+```
+una vez finalizadas las operaciones, es necesario levantar la bbdd
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+npm run jsonserver
+```
 
-## Further help
+podemos ver el sistema en el navegador
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+ng serve -o
+```
+
+## Construido con 🛠️
+
+* [Angular](https://angular.io/) - El framework usado
+* [Node](https://nodejs.org/es/) - Entorno de ejecución para JavaScript
+
+
+## Autores ✒️
+
+* **Julio Fernández** - [julioffdez](https://github.com/julioffdez)
