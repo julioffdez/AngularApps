@@ -19,6 +19,7 @@ export class ListViewComponent implements OnInit {
   @ViewChild(MatPaginator,{static:true}) paginator: MatPaginator;
 
   constructor(private heroService:HeroesService, public dialog: MatDialog, private translateService:TranslateService) {
+	  console.log("Creando componente ListViewComponent");
    }
   
   ngAfterViewInit() {
